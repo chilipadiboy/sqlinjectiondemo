@@ -14,7 +14,7 @@ body {
 	transform: translate(0,50%);
 	margin: auto;
 	padding: 40px;
-	width: 340px;
+	width: 540px;
 	min-height: 200px;
 	background-color: rgba(255,255,255,0.9);
 }
@@ -30,13 +30,13 @@ button {
 	border: 1px solid #0a1e6e;
 	border-radius: 2px;
 	color: white;
-	width: 334px;
+	width: 534px;
 	height: 40px;
 }
 
 input {
 	font-size: 16px;
-	width: 300px;
+	width: 500px;
 	padding: 1rem;
 	border: 1px solid #ccc;
 	border-radius: 2px;

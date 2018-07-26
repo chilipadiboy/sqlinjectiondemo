@@ -38,7 +38,7 @@
 										$error_message .= "Please enter your password<br>";
 									}
 									if (empty($error_message)) {
-										$sql_select_user = "SELECT * FROM userlist WHERE username='$user'";
+										$sql_select_user = "SELECT * FROM userlist WHERE username='$user' AND ( password='$password' )";
 										// Check for sql error
 										if ($conn->multi_query($sql_select_user)) { 
 											do{
@@ -48,24 +48,21 @@
 												}
 											}while ($conn -> more_results() && $conn->next_result());
 											// Check if user is found
-											print_r($res2);
-											echo '<br></br>';
+											// print_r($res2);
+											// echo '<br></br>';
 											if ($res2!=null) {
-													if ($res2[0]['Password']==$password){
 														// Login successful, initializ	e session information
-														if ($res2[0]['Type']==1){
-															echo "Logged in as an <b>ADMINISTRATOR</b>";
-														}else if ($res2[0]['Type']==0){
-															echo "Logged in as a <b>USER</b>";
+														if ($res2[0]['Priviledge']==1){
+															echo "Logged in successfully as an <b>ADMINISTRATOR</b>";
+														}else if ($res2[0]['Priviledge']==0){
+															echo "Logged in successfully as a <b>USER</b>";
 														}else{
 															echo "Your account is configured incorrectly";
 														}
-													}else{
-														echo "Wrong password";
-													}
+													
 												$retry = false;
 											} else {
-												echo "Invalid username";
+												echo "Invalid username or password";
 												$retry = true;
 											}
 										} else {

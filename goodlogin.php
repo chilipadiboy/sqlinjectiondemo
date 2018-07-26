@@ -49,9 +49,9 @@
 											echo '<br></br>';
 											if (!empty($row)) {
 												// Login successful, initialize session information
-												if ($row['Type']==1){
+												if ($row['Priviledge']==1){
 													echo "Logged in as an <b>ADMINISTRATOR</b>";
-												} else if($row['Type']==0){
+												} else if($row['Priviledge']==0){
 													echo "Logged in as a <b>USER</b>";
 												} else {
 													echo "No such user";
